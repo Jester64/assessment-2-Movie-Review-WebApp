@@ -1,6 +1,131 @@
-# Getting Started with Create React App
+<h1/>🍃 Minty Yard – Movie Web App</h1>
 
+This is a responsive React web application designed with a multi-page layout using React Router. It communicates with a QUT-hosted movie database API to allow user registration, login, token refresh, and data retrieval for movies and actors.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<h2/>📦 Setup Instructions</h2>
+
+<h3/>1. Install PHP (Optional – for backend API testing)</h3>
+
+This project communicates with a pre-hosted backend at:
+
+http://sefdb02.qut.edu.au:3000
+
+No local PHP setup is required unless mocking the backend.
+<h3/>2. Install Laravel (Optional)</h3>
+
+Only needed if you intend to recreate or modify the backend. This project consumes the API but does not include a Laravel backend.
+<h3/>3. Add API Keys / Environment Variables</h3>
+
+Currently, the app uses a hardcoded API endpoint. If using a .env file in future versions:
+
+REACT_APP_API_URL=http://sefdb02.qut.edu.au:3000
+
+<h3/>4. Install Dependencies</h3>
+
+Ensure Node.js is installed, then run:
+
+npm install
+
+<h3/>5. Run the Web Server</h3>
+
+Use the following command to start the development server:
+
+npm run dev
+
+Or if using react-scripts:
+
+npm start
+
+<h3/>6. View in Browser</h3>
+
+Visit the local server URL (usually):
+
+http://127.0.0.1:5173/
+
+or
+
+http://localhost:3000/
+
+<h2/>🧭 Project Structure</h2>
+
+public/
+  
+  img/
+  
+  favicon.ico
+  
+  index.html
+  
+  ...
+
+src/
+  
+  components/
+  
+  Footer.jsx      # Footer with copyright
+  
+  Header.jsx      # Includes logo and Nav
+  
+  Nav.jsx         # Nav links with React Router
+
+  pages/
+    
+  Home.jsx        # Main functionality: Register, Login, Token Refresh, Movie search
+    
+  Menu.jsx        # Placeholder
+    
+  Book.jsx        # Placeholder
+    
+  About.jsx       # Placeholder
+
+  App.js            # Router and layout structure
+  
+  App.css           # Main styling file
+  
+  index.js          # ReactDOM render point
+
+<h2/>🎨 Design Choices</h2>
+
+  Routing: React Router is used for navigation (BrowserRouter, Route, Link).
+
+  Component-Based UI: Clear separation between UI components (Header, Footer, Nav) and page content (Home, Menu, etc.).
+
+  API Integration: Uses fetch() to interact with QUT movie API for login, registration, token refresh, actor/movie search.
+
+  Tokens in localStorage: JWTs are stored for authentication and authorization.
+
+  Styling:
+
+  Responsive layout using CSS media queries.
+
+  Sticky nav aligned right; visually appealing header/footer.
+
+  Clean font and layout reset for cross-browser consistency.
+
+<h2/>🧪 Testing</h2>
+
+Basic unit test in App.test.js using @testing-library/react.
+
+Run tests with:
+
+npm test
+
+<h2/>🚀 Future Improvements</h2>
+
+Add proper user input fields (email/password) instead of hardcoding.
+
+Display fetched data (e.g., movie results, actor info) in components.
+
+Improve accessibility and responsive layout.
+
+Form validation for login/register.
+
+Authentication-aware navigation (e.g., show "Logout" only when logged in).
+
+<h2/>📄 License</h2>
+
+This project is for educational purposes (QUT assignment/project) and not licensed for production use.
 
 ## Available Scripts
 
